@@ -39,8 +39,8 @@ multihash.
 	Subcommands: map[string]*cmds.Command{
 		"stat": blockStatCmd,
 		"get":  blockGetCmd,
-		"put":  blockPutCmd,
-		"rm":   blockRmCmd,
+		// "put":  blockPutCmd,
+		"rm": blockRmCmd,
 	},
 }
 

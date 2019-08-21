@@ -28,11 +28,10 @@ const (
 var Root = &cmds.Command{
 	Helptext: cmds.HelpText{
 		Tagline:  "Global p2p merkle-dag filesystem.",
-		Synopsis: "ipfs [--config=<config> | -c] [--debug | -D] [--help] [-h] [--api=<api>] [--offline] [--cid-base=<base>] [--upgrade-cidv0-in-output] [--encoding=<encoding> | --enc] [--timeout=<timeout>] <command> ...",
+		Synopsis: "dstor [--config=<config> | -c] [--debug | -D] [--help] [-h] [--api=<api>] [--offline] [--cid-base=<base>] [--upgrade-cidv0-in-output] [--encoding=<encoding> | --enc] [--timeout=<timeout>] <command> ...",
 		Subcommands: `
 BASIC COMMANDS
   init          Initialize ipfs local configuration
-  add <path>    Add a file to IPFS
   cat <ref>     Show IPFS object data
   get <ref>     Download IPFS objects
   ls <ref>      List links from an object
