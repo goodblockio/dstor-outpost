@@ -7,7 +7,7 @@ import (
 	dag "github.com/ipfs/go-ipfs/core/commands/dag"
 	name "github.com/ipfs/go-ipfs/core/commands/name"
 	ocmd "github.com/ipfs/go-ipfs/core/commands/object"
-	unixfs "github.com/ipfs/go-ipfs/core/commands/unixfs"
+	// unixfs "github.com/ipfs/go-ipfs/core/commands/unixfs"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log"
@@ -125,11 +125,11 @@ var rootSubcommands = map[string]*cmds.Command{
 	"stats":     StatsCmd,
 	"bootstrap": BootstrapCmd,
 	"config":    ConfigCmd,
-	"dag":       dag.DagCmd,
-	"dht":       DhtCmd,
-	"diag":      DiagCmd,
-	"dns":       DNSCmd,
-	"id":        IDCmd,
+	// "dag":  dag.DagCmd,
+	// "dht":  DhtCmd,
+	"diag": DiagCmd,
+	"dns":  DNSCmd,
+	"id":   IDCmd,
 	// "key":       KeyCmd,
 	"log": LogCmd,
 	"ls":  LsCmd,
@@ -142,10 +142,10 @@ var rootSubcommands = map[string]*cmds.Command{
 	"refs":    RefsCmd,
 	"resolve": ResolveCmd,
 	"swarm":   SwarmCmd,
-	"tar":     TarCmd,
+	// "tar":     TarCmd,
 	// "file":    unixfs.UnixFSCmd,
 	// "update":    ExternalBinary("Please see https://git.io/fjylH for installation instructions."),
-	"urlstore": urlStoreCmd,
+	// "urlstore": urlStoreCmd,
 	"version":  VersionCmd,
 	"shutdown": daemonShutdownCmd,
 	"cid":      CidCmd,
