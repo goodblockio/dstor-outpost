@@ -39,16 +39,10 @@ BASIC COMMANDS
 
 DATA STRUCTURE COMMANDS
   block         Interact with raw blocks in the datastore
-  object        Interact with raw dag nodes
-  files         Interact with objects as if they were a unix filesystem
-  dag           Interact with IPLD documents (experimental)
 
 ADVANCED COMMANDS
   daemon        Start a long-running daemon process
-  mount         Mount an IPFS read-only mountpoint
   resolve       Resolve any type of name
-  name          Publish and resolve IPNS names
-  key           Create and list IPNS name keypairs
   dns           Resolve DNS links
   pin           Pin objects to local storage
   repo          Manipulate the IPFS repository
@@ -60,7 +54,6 @@ NETWORK COMMANDS
   id            Show info about IPFS peers
   bootstrap     Add or remove bootstrap peers
   swarm         Manage connections to the p2p network
-  dht           Query the DHT for values or peers
   ping          Measure the latency of a connection
   diag          Print diagnostics
 
@@ -112,12 +105,10 @@ var CommandsDaemonCmd = CommandsCmd(Root)
 
 var rootSubcommands = map[string]*cmds.Command{
 	/* dStor MARK */
-	// "add":       AddCmd,
-	"bitswap":  BitswapCmd,
-	"block":    BlockCmd,
-	"cat":      CatCmd,
-	"commands": CommandsDaemonCmd,
-	// "files":     FilesCmd,
+	"bitswap":   BitswapCmd,
+	"block":     BlockCmd,
+	"cat":       CatCmd,
+	"commands":  CommandsDaemonCmd,
 	"filestore": FileStoreCmd,
 	"get":       GetCmd,
 	"pubsub":    PubsubCmd,
@@ -125,30 +116,20 @@ var rootSubcommands = map[string]*cmds.Command{
 	"stats":     StatsCmd,
 	"bootstrap": BootstrapCmd,
 	"config":    ConfigCmd,
-	// "dag":  dag.DagCmd,
-	// "dht":  DhtCmd,
-	"diag": DiagCmd,
-	"dns":  DNSCmd,
-	"id":   IDCmd,
-	// "key":       KeyCmd,
-	"log": LogCmd,
-	"ls":  LsCmd,
-	// "mount":     MountCmd,
-	// "name":      name.NameCmd,
-	// "object":  ocmd.ObjectCmd,
-	"pin":     PinCmd,
-	"ping":    PingCmd,
-	"p2p":     P2PCmd,
-	"refs":    RefsCmd,
-	"resolve": ResolveCmd,
-	"swarm":   SwarmCmd,
-	// "tar":     TarCmd,
-	// "file":    unixfs.UnixFSCmd,
-	// "update":    ExternalBinary("Please see https://git.io/fjylH for installation instructions."),
-	// "urlstore": urlStoreCmd,
-	"version":  VersionCmd,
-	"shutdown": daemonShutdownCmd,
-	"cid":      CidCmd,
+	"diag":      DiagCmd,
+	"dns":       DNSCmd,
+	"id":        IDCmd,
+	"log":       LogCmd,
+	"ls":        LsCmd,
+	"pin":       PinCmd,
+	"ping":      PingCmd,
+	"p2p":       P2PCmd,
+	"refs":      RefsCmd,
+	"resolve":   ResolveCmd,
+	"swarm":     SwarmCmd,
+	"version":   VersionCmd,
+	"shutdown":  daemonShutdownCmd,
+	"cid":       CidCmd,
 }
 
 // RootRO is the readonly version of Root
