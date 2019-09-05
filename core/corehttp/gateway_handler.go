@@ -234,7 +234,8 @@ func (i *gatewayHandler) getOrHeadHandler(w http.ResponseWriter, r *http.Request
 
 	if f, ok := dr.(files.File); ok {
 		if strings.HasPrefix(urlPath, ipfsPathPrefix) {
-			w.Header().Set("Cache-Control", "public, max-age=29030400, immutable")
+			// Turning this down to 12 hours for dStor
+			w.Header().Set("Cache-Control", "public, max-age=43200, immutable")
 
 			// set modtime to a really long time ago, since files are immutable and should stay cached
 			modtime = time.Unix(1, 0)
